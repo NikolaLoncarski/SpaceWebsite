@@ -1,6 +1,6 @@
 @import "./variables";
 @import "./base.module.scss";
-.crewDotNav {
+.tech {
   list-style-type: none;
   height: 300px;
   width: 132px;
@@ -10,12 +10,12 @@
   margin-left: 165px;
   text-align: center;
   align-self: center;
-  li {
+  button {
     height: 80px;
     width: 80px;
 
     border-radius: 50%;
-    display: inline-block;
+
     cursor: pointer;
 
     font-family: "Bellefair", serif;
@@ -23,20 +23,23 @@
     font-size: 32px;
 
     border: 1px solid $greyish;
-    text-align: middle;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
   }
-  li:hover {
+  button:hover {
     border-color: $white;
-  }
-  p {
-    color: $white;
   }
 }
 @media (max-width: 768px) {
-  .crewDotNav {
+  .tech {
     flex-direction: row;
     width: 210px;
     height: 60px;
     margin: 0;
+    button {
+      height: 60px;
+      width: 60px;
+    }
   }
 }

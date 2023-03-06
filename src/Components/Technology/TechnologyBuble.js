@@ -10,13 +10,13 @@ function TechnologyBuble({ setActiveDot, name }) {
       .map((e, i) => {
         const reference = e.name;
         return (
-          <li
+          <button
             style={
               e.name === name
-                ? { backgroundColor: "#fff" }
+                ? { backgroundColor: "#fff", color: "#000" }
                 : {
                     backgroundColor: "#0b0d17",
-                    
+                    color: "#fff",
                   }
             }
             onClick={(e) => {
@@ -25,25 +25,15 @@ function TechnologyBuble({ setActiveDot, name }) {
             }}
             key={i}
           >
-            <p
-              style={
-                e.name === name
-                  ? { color: "#000" }
-                  : {
-                      color: "#fff",
-                    }
-              }
-            >
-              {i + 1}
-            </p>
-          </li>
+            {i + 1}
+          </button>
         );
       });
 
   return (
-    <ul className={styles.crewDotNav}>
+    <section className={styles.tech}>
       <FilteredCrew />
-    </ul>
+    </section>
   );
 }
 

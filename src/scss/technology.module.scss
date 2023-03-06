@@ -4,53 +4,54 @@ body {
   background-image: url(../assets/crew/background-crew-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 100%;
+  width: 100%;
   height: 100vh;
   color: $white;
   overflow: hidden;
+}
 
-  .flexTechnology {
+.flexTechnology {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-between;
+  top: 271px;
+  height: 527px;
+  right: 0;
+  width: 100%;
+  align-items: center;
+
+  .techInfo {
     display: flex;
     flex-direction: row;
-    position: absolute;
-    justify-content: space-between;
-    top: 271px;
-    height: 527px;
-    right: 0;
-    width: 100%;
-    align-items: center;
+    color: $white;
+    justify-content: space-around;
 
-    .techInfo {
-      display: flex;
-      flex-direction: row;
+    min-width: 0;
+    align-self: center;
+  }
+  .techDetails {
+    max-width: 614px;
+    h5 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 28px;
+      color: $greyish;
+    }
+    p {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 24px;
       color: $white;
-      justify-content: space-around;
-      // max-width: 614px;
-      min-width: 0;
-      align-self: center;
-    }
-    .techDetails {
-      max-width: 614px;
-      h5 {
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 28px;
-        color: $greyish;
-      }
-      p {
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 24px;
-        color: $white;
-        margin: 0;
-      }
-    }
-    img {
-      top: 272px;
-      right: 0%;
-      min-width: 0;
-      max-width: 515px;
+      margin: 0;
     }
   }
+  img {
+    top: 272px;
+    right: 0%;
+    min-width: 0;
+    max-width: 515px;
+  }
 }
+
 .techIntro {
   display: flex;
   flex-direction: row;
@@ -74,24 +75,30 @@ body {
 }
 @media (max-width: 768px) {
   .flexTechnology {
+    position: absolute;
     top: 220px;
-    flex-direction: column-reverse !important;
-
+    flex-direction: column-reverse;
+    left: 0;
+    height: 700px;
+    width: 768px;
     .techInfo {
       top: 232px;
-      flex-direction: column !important;
-
-      max-height: 100vh;
-      img {
-        width: 100%;
-        height: 310px;
+      flex-direction: column;
+      left: 0;
+      width: 768px;
+      text-align: center;
+      align-items: center;
+      .techDetails {
+        text-align: center;
+        width: 768px;
       }
     }
-    .techIntro {
-      top: 136px;
-      left: 24px;
-      flex-direction: column;
-      align-items: center;
+    img {
+      min-width: 100%;
     }
+  }
+  .techIntro {
+    top: 136px;
+    left: 24px;
   }
 }
