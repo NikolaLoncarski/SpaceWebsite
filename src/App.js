@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./Components/Home/Home";
+import Nav from "./Components/Nav/Nav";
+import styles from "./scss/base.module.scss";
+import Destination from "./Components/Destionation/Destination";
+import Crew from "./Components/Crew/Crew";
+import Technology from "./Components/Technology/Technology"
+import {
+  createRoutesFromElements,
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Nav />}>
+      <Route index element={<Home />} />
+      <Route path="destination" element={<Destination />} />
+      <Route path="crew" element={<Crew />} />
+      <Route path="technology" element={<Technology />} />
+    </Route>
+  )
+);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <RouterProvider router={router} />
+      {/* <Nav />
+      <main>
+        <Home />
+      </main> */}
     </div>
   );
 }

@@ -1,0 +1,113 @@
+@import "./variables";
+@import "./base.module.scss";
+.crewSection {
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-image: url(../assets/crew/background-crew-desktop.jpg);
+
+  background-size: cover;
+  .flexCrewSection {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    width: 100%;
+    top: 212px;
+    justify-content: space-around;
+
+    .sectionIntro {
+      display: flex;
+      flex-direction: row;
+
+      gap: 1rem;
+
+      h5 {
+        margin: 0;
+        opacity: 0.5;
+      }
+      h3 {
+        margin: 0;
+      }
+      p {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 16px;
+        margin: 0;
+        width: 444px;
+      }
+    }
+    .crewFlexContainer {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      bottom: 0;
+      justify-content: space-around;
+
+      .crewInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 614px;
+        min-width: 0;
+        right: 0;
+        flex-wrap: wrap;
+        align-self: center;
+        height: max-content;
+      }
+      .crewDetails {
+        width: 614px;
+      }
+      h4 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 32px;
+        color: $white;
+        margin: 0;
+        opacity: 0.5;
+      }
+
+      p {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 24px;
+        color: $white;
+        margin: 0;
+      }
+    }
+    .imgContainer {
+      height: 100%;
+
+      width: max-content;
+      max-height: 100%;
+      object-fit: cover;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .crewSection {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+    align-items: center;
+
+    .flexCrewSection {
+      top: 232px;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      .imgContainer {
+        align-self: center;
+      }
+    }
+    .crewFlexContainer {
+      align-items: center;
+      flex: 1;
+      .crewInfo {
+        align-items: center;
+        width: 520px;
+      }
+    }
+  }
+}

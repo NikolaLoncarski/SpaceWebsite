@@ -1,0 +1,42 @@
+@import "./variables";
+@import "./base.module.scss";
+.crewDotNav {
+  list-style-type: none;
+  height: 300px;
+  width: 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 165px;
+  text-align: center;
+  align-self: center;
+  li {
+    height: 80px;
+    width: 80px;
+
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-size: 32px;
+
+    border: 1px solid $greyish;
+    text-align: middle;
+  }
+  li:hover {
+    border-color: $white;
+  }
+  p {
+    color: $white;
+  }
+}
+@media (max-width: 768px) {
+  .crewDotNav {
+    flex-direction: row;
+    width: 210px;
+    height: 60px;
+    margin: 0;
+  }
+}
