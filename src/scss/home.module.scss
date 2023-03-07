@@ -70,3 +70,39 @@ title {
     }
   }
 }
+@media (max-width: 375px) {
+  h1 {
+    font-size: 80px;
+  }
+  .home {
+    background-image: url(../assets/home/background-home-mobile.jpg);
+    .intro {
+      flex-direction: column;
+      top: 1px;
+      left: 10%;
+      width: 80%;
+      bottom: 0;
+      align-items: center;
+      text-align: center;
+    }
+    .leftIntro {
+      width: 100%;
+    }
+    .rightIntro {
+      width: fit-content;
+      overflow: visible;
+      position: relative;
+
+      button {
+        width: 150px;
+        height: 150px;
+
+        font-weight: 400;
+        font-size: 32px;
+        box-sizing: content-box;
+        bottom: 20%;
+        cursor: pointer;
+      }
+    }
+  }
+}

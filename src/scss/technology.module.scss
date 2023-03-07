@@ -1,13 +1,15 @@
 @import "./variables";
 @import "./base.module.scss";
-body {
-  background-image: url(../assets/crew/background-crew-desktop.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
+.tech {
+  background-image: url(../assets/technology/background-technology-desktop.jpg);
+
+  background-attachment: fixed;
   height: 100vh;
+  width: 100%;
+  background-position: center;
+
   color: $white;
-  overflow: hidden;
+  background-size: cover;
 }
 
 .flexTechnology {

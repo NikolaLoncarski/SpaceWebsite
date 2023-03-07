@@ -3,12 +3,13 @@ import styles from "../../scss/nav.module.scss";
 import Logo from "../../assets/shared/logo.svg";
 import { NavLink, Outlet } from "react-router-dom";
 import { useGlobalContext } from "../Context/Context";
-
+import SlideMenu from "./SlideMenu";
 function Nav() {
   let activeStyle = {
     borderBottom: "2px solid #fff",
   };
   const { setDestionationStatus, setBackground } = useGlobalContext();
+
   return (
     <>
       <nav className={styles.nav}>
@@ -16,8 +17,9 @@ function Nav() {
           <img src={Logo} alt="logo" />
         </div>
 
+        <SlideMenu />
         <div className={styles.styled_line}></div>
-        <div className={styles.links}>
+        <div className={styles.links} id="navLinks">
           <NavLink
             style={
               (`${styles.navLink}`,

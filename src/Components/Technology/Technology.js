@@ -60,7 +60,7 @@ export default function Technology() {
     });
 
   return (
-    <section>
+    <section className={styles.tech}>
       <Description />
     </section>
   );
