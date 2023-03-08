@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "../../scss/home.module.scss";
+import "../../scss/home.scss";
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className={styles.home}>
-      <div className={styles.intro}>
-        <div className={styles.leftIntro}>
+    <div className="home">
+      <div className="intro">
+        <div className="leftIntro">
           <h5>So, you want to travel to</h5> <h1>Space</h1>
           <p>
             Let’s face it; if you want to go to space, you might as well
@@ -15,7 +15,7 @@ function Home() {
             world experience!
           </p>
         </div>
-        <div className={styles.rightIntro}>
+        <div className="rightIntro">
           <Link to="destination">
             <button>Explore</button>
           </Link>

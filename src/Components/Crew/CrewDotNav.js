@@ -1,5 +1,5 @@
 import { useGlobalContext } from "../Context/Context";
-import styles from "../../scss/crewDotNav.module.scss";
+import "../../scss/crewDotNav.scss";
 function CrewDotNav({ setActiveDot, name }) {
   const { dataInfo, setStatus } = useGlobalContext();
 
@@ -29,7 +29,7 @@ function CrewDotNav({ setActiveDot, name }) {
       });
 
   return (
-    <ul className={styles.crewDotNav}>
+    <ul className="crewDotNav">
       <FilteredCrew />
     </ul>
   );

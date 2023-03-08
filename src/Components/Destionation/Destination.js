@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../scss/destination.module.scss";
+import "../../scss/destination.scss";
 
 import { useGlobalContext } from "../Context/Context";
 import DestinationSubNav from "./DestinationSubNav";
@@ -17,19 +17,19 @@ export default function Destination() {
 
       return (
         <div key={id}>
-          <div className={styles.activeElements}>
+          <div className="activeElements">
             <h5>01</h5>
             <p>PICK YOUR DESTINATION </p>
             <p> {name}</p>
           </div>
-          <div className={styles.destinationFlexContainer} key={id}>
+          <div className="destinationFlexContainer" key={id}>
             <img
-              className={styles.planetImg}
+              className="planetImg"
               key={name}
               src={imageSrc}
               alt={e.crew[destionationStatus].name}
             />
-            <div className={styles.description}>
+            <div className="description">
               <DestinationSubNav
                 activeBorder={activeBorder}
                 setActiveBorder={setActiveBorder}
@@ -39,8 +39,8 @@ export default function Destination() {
               <h2>{name}</h2>
               <p>{description}</p>
 
-              <div className={styles.whiteLine}></div>
-              <div className={styles.subDescription}>
+              <div className="whiteLine"></div>
+              <div className="subDescription">
                 <div className="avgD">
                   <p>Avg. Distance</p>
                   <h5>{distance}</h5>
@@ -58,7 +58,7 @@ export default function Destination() {
     });
 
   return (
-    <div className={styles.destination}>
+    <div className="destination">
       <Description />
     </div>
   );

@@ -1,10 +1,10 @@
 import "./App.css";
 import Home from "./Components/Home/Home";
 import Nav from "./Components/Nav/Nav";
-import styles from "./scss/base.module.scss";
+import "./scss/base.scss";
 import Destination from "./Components/Destionation/Destination";
 import Crew from "./Components/Crew/Crew";
-import Technology from "./Components/Technology/Technology"
+import Technology from "./Components/Technology/Technology";
 import {
   createRoutesFromElements,
   createBrowserRouter,
@@ -24,7 +24,7 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <div className={styles.App}>
+    <div className="App">
       <RouterProvider router={router} />
       {/* <Nav />
       <main>

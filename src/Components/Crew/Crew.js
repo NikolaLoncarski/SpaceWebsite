@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../scss/crew.module.scss";
+import "../../scss/crew.scss";
 
 import { useGlobalContext } from "../Context/Context";
 import CrewDotNav from "./CrewDotNav";
@@ -16,13 +16,13 @@ export default function Crew() {
       const imageSrc = images.png;
 
       return (
-        <section className={styles.flexCrewSection} key={id}>
-          <div className={styles.crewFlexContainer}>
-            <div className={styles.sectionIntro}>
+        <section className="flexCrewSection" key={id}>
+          <div className="crewFlexContainer">
+            <div className="sectionIntro">
               <h5>02</h5>
               <p>MEET YOUR CREW</p>
             </div>
-            <div className={styles.crewInfo}>
+            <div className="crewInfo">
               <h4> {role}</h4>
               <h3>{name}</h3>
               <p>{bio}</p>
@@ -33,7 +33,7 @@ export default function Crew() {
               name={name}
             />
           </div>
-          <div className={styles.imgContainer}>
+          <div className="imgContainer">
             <img src={imageSrc} alt={e.crew[destionationStatus].name} />
           </div>
         </section>
@@ -41,7 +41,7 @@ export default function Crew() {
     });
 
   return (
-    <section className={styles.crewSection}>
+    <section className="crewSection">
       <Description />
     </section>
   );

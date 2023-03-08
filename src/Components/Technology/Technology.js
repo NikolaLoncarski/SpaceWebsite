@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "../../scss/technology.module.scss";
+import "../../scss/technology.scss";
 import { useGlobalContext } from "../Context/Context";
 import TechnologyBuble from "./TechnologyBuble";
 
@@ -31,18 +31,18 @@ export default function Technology() {
 
       return (
         <>
-          <div className={styles.techIntro}>
+          <div className="techIntro">
             <h5>03</h5>
-            <p>SPACE LAUNCH 101</p>
+            <span>SPACE LAUNCH 101</span>
           </div>
-          <div className={styles.flexTechnology} key={id}>
-            <div className={styles.techInfo}>
+          <div className="flexTechnology" key={id}>
+            <div className="techInfo">
               <TechnologyBuble
                 activeDot={activeDot}
                 setActiveDot={setActiveDot}
                 name={name}
               />
-              <div className={styles.techDetails}>
+              <div className="techDetails">
                 <p>THE TECHNOLOGY</p>
                 <h3>{name}</h3>
                 <p>{description}</p>
@@ -50,7 +50,7 @@ export default function Technology() {
             </div>
 
             <img
-              className={styles.planetImg}
+              className="planetImg"
               src={imageSrc}
               alt={e.technology[destionationStatus].name}
             />
@@ -60,7 +60,7 @@ export default function Technology() {
     });
 
   return (
-    <section className={styles.tech}>
+    <section className="tech">
       <Description />
     </section>
   );

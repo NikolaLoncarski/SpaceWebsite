@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "../../scss/nav.module.scss";
+import "./../../scss/nav.scss";
 import Logo from "../../assets/shared/logo.svg";
 import { NavLink, Outlet } from "react-router-dom";
 import { useGlobalContext } from "../Context/Context";
-import SlideMenu from "./SlideMenu";
+
 function Nav() {
   let activeStyle = {
     borderBottom: "2px solid #fff",
@@ -12,19 +12,15 @@ function Nav() {
 
   return (
     <>
-      <nav className={styles.nav}>
-        <div className={styles.logo}>
+      <nav className="nav">
+        <div className="logo">
           <img src={Logo} alt="logo" />
         </div>
 
-        <SlideMenu />
-        <div className={styles.styled_line}></div>
-        <div className={styles.links} id="navLinks">
+        <div className="styled_line"></div>
+        <div className="links" id="navLinks">
           <NavLink
-            style={
-              (`${styles.navLink}`,
-              ({ isActive }) => (isActive ? activeStyle : undefined))
-            }
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
             to="/"
           >
             <strong>00</strong> Home

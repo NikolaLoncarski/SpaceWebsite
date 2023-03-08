@@ -1,5 +1,5 @@
 import { useGlobalContext } from "../Context/Context";
-import styles from "../../scss/destinationSubNav.module.scss";
+import "../../scss/destinationSubNav.scss";
 function DestinationSubNav({ setActiveBorder, name }) {
   const { dataInfo, setStatus } = useGlobalContext();
 
@@ -10,7 +10,7 @@ function DestinationSubNav({ setActiveBorder, name }) {
       .map((e, i) => {
         return (
           <li
-            className={styles.subNavItem}
+            className="subNavItem"
             style={
               e.name === name
                 ? { borderBottom: "1px solid white", color: "#fff" }
@@ -30,7 +30,7 @@ function DestinationSubNav({ setActiveBorder, name }) {
       });
 
   return (
-    <ul className={styles.subNav}>
+    <ul className="subNav">
       <FilteredDestinations />
     </ul>
   );

@@ -1,5 +1,5 @@
 import { useGlobalContext } from "../Context/Context";
-import styles from "../../scss/TechnologyBuble.module.scss";
+import "../../scss/TechnologyBuble.scss";
 function TechnologyBuble({ setActiveDot, name }) {
   const { dataInfo, setStatus } = useGlobalContext();
 
@@ -31,7 +31,7 @@ function TechnologyBuble({ setActiveDot, name }) {
       });
 
   return (
-    <section className={styles.tech}>
+    <section className="tech-bubble">
       <FilteredCrew />
     </section>
   );
